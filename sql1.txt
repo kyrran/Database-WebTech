@@ -1,0 +1,52 @@
+Output 1
+SELECT * FROM Movie WHERE mvGenre = "Adventure";
+
+Output 2
+SELECT mvTitle FROM Movie WHERE mvPrice < 10.00;
+
+Output 3
+SELECT * FROM Movie WHERE (mvGenre = "Drama") OR (mvPrice > 10.00);
+
+Output 4
+SELECT mvTitle FROM Movie WHERE (mvGenre = "Action") AND ((mvYear >= 2000) AND (mvYear <= 2019));
+
+Output 5
+SELECT mvTitle FROM Movie WHERE (mvPrice < 10.00) AND ((mvGenre = "Action") OR (mvGenre = "Adventure"));
+
+Output 6
+SELECT * FROM Actor, Movie WHERE Actor.actID = Movie.actID;
+
+Output 7
+SELECT mvTitle FROM Actor, Movie WHERE (Actor.actID = Movie.actID) AND (actName = "Barry Nelson");
+
+Output 8
+SELECT * FROM Movie WHERE mvGenre IN
+           (SELECT mvGenre FROM Movie WHERE mvGenre = "Comedy");
+
+Output 9
+SELECT mvTitle FROM Movie WHERE mvPrice IN
+            (SELECT mvPrice FROM Movie WHERE mvGenre = "Action");
+
+Output 10
+SELECT mvTitle FROM Movie WHERE mvPrice > ANY 
+          (SELECT mvPrice FROM Movie);
+
+Output 11
+SELECT mvTitle FROM Movie WHERE mvPrice >= ALL 
+          (SELECT mvPrice FROM Movie);
+
+Output 12
+SELECT actName FROM Actor WHERE EXISTS 
+         (SELECT mvGenre FROM Movie WHERE (Actor.actID = Movie.actID) AND (mvGenre = "Drama"));
+
+Output 13
+SELECT actName FROM Actor,Movie WHERE (Actor.actID = Movie.actID) AND (mvPrice < 10.00); 
+
+Output 14
+SELECT mvTitle FROM Actor,Movie WHERE (Actor.actID = Movie.actID) AND (actName LIKE "B%"); 
+
+Output 15
+SELECT * FROM Movie WHERE (mvGenre != "Drama") AND (mvPrice < 9.00); 
+
+
+

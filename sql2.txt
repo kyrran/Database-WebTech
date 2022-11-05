@@ -1,0 +1,29 @@
+Output 1
+SELECT mvTitle, mvPrice FROM Movie ORDER BY mvPrice DESC;
+
+Output 2
+SELECT mvTitle, mvPrice FROM Movie ORDER BY mvPrice ASC;
+
+Output 3
+SELECT mvTitle,mvGenre, mvPrice FROM Movie ORDER BY mvGenre ASC, mvPrice DESC;
+
+Output 4
+SELECT MIN(mvPrice) AS Lowest FROM Movie;
+
+Output 5
+SELECT COUNT(mvTitle) AS Number FROM Movie WHERE mvPrice = 9.99;
+
+Output 6
+SELECT mvTitle FROM Movie WHERE mvGenre = "Action" AND( MAX(mvPrice));
+
+Output 7
+SELECT mvTitle FROM Movie WHERE mvPrice = (SELECT MAX(mvPrice) AS Expensive FROM Movie WHERE mvGenre = "Action");
+
+Output 8
+SELECT COUNT(DISTINCT mvGenre) AS NumberofTypes FROM Movie;
+
+Output 9
+SELECT actName, AVG(mvPrice) AS Average, COUNT(actName) AS Num FROM Movie NATURAL JOIN Actor GROUP BY actName HAVING Num >1 ;
+
+Output 10
+SELECT actName, AVG(mvPrice) AS Average, COUNT(actName) AS Num FROM Movie NATURAL JOIN Actor WHERE mvGenre != "Drama" GROUP BY actName;

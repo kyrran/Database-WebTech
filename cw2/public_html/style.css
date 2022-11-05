@@ -1,0 +1,176 @@
+
+html, body {
+    margin:0;
+    padding:0;
+    background-color:whitesmoke;
+    font-family: 'Inter', sans-serif;
+    color:rgb(50,50,50);
+ 
+    
+}
+body {
+    margin-left:0em;
+ 
+}
+
+form {
+    margin-left:1em;
+}
+/*the header of main page*/
+#header {
+    margin-left:-1em;
+    margin-top:-1em;
+    font-size:1em;
+    padding:1em;
+    width:100%;
+    color:white;
+    background-color:rgb(50,50,50);
+}
+/*the header link bar*/
+#header .top button {
+    text-align: center;
+    float:right;
+    margin-right:1em;
+    color: whitesmoke;
+    margin-left:1em;
+    background-color: rgba(0, 0, 0, 0);
+    padding: .4em;
+    border-radius: .3em;
+    border: solid 1px whitesmoke;
+    margin-top: 1.5em;
+}
+ 
+input, button {
+    font-family: 'Inter', sans-serif;
+    font-size:.7em;
+    font-weight:400;
+}
+input {
+    border:none;
+    padding:.4em;
+    margin-left:1em;  
+}
+
+button {
+    border:none;
+    padding:.4em;
+    margin:0;
+    margin-left:-.4em;
+}
+
+button[type='submit']:hover,#header button[type='submit']:hover{                              
+    background-color:grey;
+    color:white;                                                 
+}        
+
+#main {
+    padding:2em;
+    margin-top:4em;
+}
+/*list of actors and movies in main page*/
+#main ul{
+    list-style-position: inside;
+    list-style-type:circle;
+    text-align:center;
+}
+/*movie and actor*/
+#header a{
+    color:whitesmoke;
+    text-decoration:none;
+}
+/*modify the layout of addinfo page*/
+#add {
+    position: fixed;
+    top:7em;
+    left:5em;
+}
+/*modify the layout of deleteinfo page*/
+#delete {
+    position: fixed;
+    top:7em;
+    left:5em;
+}
+/*modify the table in search*/
+table#search {
+    position:absolute;
+    text-align:left;
+    border: 1px solid black;
+    padding:6px;
+    width:400px;
+    top:7em;
+    left:5em;
+}
+
+/*select on deleteinfo and addinfo*/
+select{
+    color:rgb(50,50,50);
+    border:none;
+    background-color: white;
+    border-radius: 4px;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    margin: 0;      
+    /*let the original arrow disapper*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-appearance: none; 
+
+    background-image:
+    /*the color of arrow*/
+    /*reference:https://codepen.io/vkjgr/pen/VYMeXp*/
+    /*triangle*/
+      linear-gradient(45deg, transparent 50%, rgb(50,50,50) 50%),
+      linear-gradient(135deg, rgb(50,50,50) 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    
+}
+/*the layout of addinfo and deleteinfo*/
+input[type='number']{
+    border-radius: 4px;
+    line-height: 1.5em;
+    font-size:.9em;
+    color:rgb(50,50,50);
+    margin-left:1.8em;
+    width:4em;
+    padding: 0.5em 0.3em 0.5em 1em;
+
+}
+input#mvname{
+    background-color:white;
+    width:10em;
+    margin-left:2em;
+    border-radius: 4px;
+    line-height: 1.5em;
+    font-size:.9em;
+    padding: 0.5em 0.3em 0.5em 1em;
+    color:rgb(50,50,50);
+}
+select#mvGenre,select#delname, select#delid{
+    margin-left:1em;
+    margin-right:1em;
+}
+select#actID{
+    margin-left:1.3em;
+}
+select#mvYear{
+    margin-left:1.9em;
+}
+input#name{
+    background-color:white;
+    border-radius: 4px;
+    line-height: 1.5em;
+    font-size:.9em;
+    color:rgb(50,50,50);
+    margin-right:1em;
+    padding: 0.5em 0.3em 0.5em 1em;
+}
